@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="user-detail-form">
+        <h2>Flex Register</h2><br><br>
+        <label>User Name</label>&nbsp;
+        <select (change)="updateInfo($event)">
+            <option value="none">--None--</option>
+            <option *ngFor="let userInfo of userDetails; index as i" [value]="i">
+                {{userInfo.username}}
+            </option>
+        </select>
+        <br><br>
+
+        <label>Gss Id</label>&nbsp;<input type="text"  [value]="gssid" readonly>
+        <br><br>
+
+        <label>Attendance</label>&nbsp;
+        <select>
+            <option value="none">--None--</option>
+            <option *ngFor="let checkIn of attendance" value="">{{checkIn}}</option>
+        </select>
+        <br><br><br>
+
+        <button class="btn btn-primary">SEND EMAIL</button>
+    </div>
+</div>
